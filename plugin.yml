@@ -1,0 +1,7 @@
+name: Infocmd
+description: Information on Command
+main: Infocmd\MainClass
+author: Radix
+api: 1.12.0
+website: DarkRealms.cf
+version: 1.0.0
