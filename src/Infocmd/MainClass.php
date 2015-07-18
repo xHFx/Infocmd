@@ -29,6 +29,6 @@ class MainClass extends PluginBase implements Listener{
              foreach($this->getConfig()->get("info") as $info){
                $player->sendMessage("[Info]" . $info . "!");}
                  return true;
-             default:
+             break;
                  return false;
          }
