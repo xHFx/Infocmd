@@ -15,13 +15,9 @@ class MainClass extends PluginBase implements Listener{
 		$this->getLogger()->info(TextFormat::WHITE . "InfoCmd has been loaded!");
 	}
 	public function onEnable(){
-		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info(TextFormat::DARK_GREEN . "InfoCmd has been enabled!");
-     $this->saveDefaultConfig();
+    	$this->saveDefaultConfig();
     }
-	public function onDisable(){
-		$this->getLogger()->info(TextFormat::DARK_RED . "InfoCmd has been disabled!");
-	}
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
          switch($command->getName()){
              case "info":
@@ -30,5 +26,6 @@ class MainClass extends PluginBase implements Listener{
                $player->sendMessage("[Info]" . $info . "!");}
                  return true;
              break;
-                 return false;
          }
+    }
+}
