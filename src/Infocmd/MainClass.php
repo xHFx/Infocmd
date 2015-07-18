@@ -21,7 +21,7 @@ class MainClass extends PluginBase implements Listener{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
          switch($command->getName()){
              case "info":
-                  $player = $event->getPlayer();
+                  $player = $sender->getPlayer();
              foreach($this->getConfig()->get("info") as $info){
                $player->sendMessage("[Info]" . $info . "!");}
                  return true;
