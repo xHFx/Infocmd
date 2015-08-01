@@ -1,4 +1,5 @@
 ---
+prefix: "[INFO]"
 info:
   - "Website: google.com"
   - "Vote: google.com"
