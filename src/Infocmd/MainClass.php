@@ -23,7 +23,7 @@ class MainClass extends PluginBase implements Listener{
              case "info":
                   $player = $sender->getPlayer();
              foreach($this->getConfig()->get("info") as $info){
-               $player->sendMessage("[Info]" . $info . "!");}
+               $player->sendMessage($this->getConfig()->get("prefix"). $info . "!");}
                  return true;
              break;
          }
