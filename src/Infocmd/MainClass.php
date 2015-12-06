@@ -11,20 +11,18 @@ use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 
 class MainClass extends PluginBase implements Listener{
-	public function onLoad(){
-		$this->getLogger()->info(TextFormat::WHITE . "InfoCmd has been loaded!");
-	}
 	public function onEnable(){
 		$this->getLogger()->info(TextFormat::DARK_GREEN . "InfoCmd has been enabled!");
-    	$this->saveDefaultConfig();
-    }
+    		$this->saveDefaultConfig();
+    	}
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
          switch($command->getName()){
-             case "info":
+             case "info1":
+             $sender->sendMessage($this->getConfig()->get("info1"));
+             break;
+             case "info2":
                   $player = $sender->getPlayer();
-             foreach($this->getConfig()->get("info") as $info){
-               $player->sendMessage("[Info]" . $info . "!");}
-                 return true;
+             $sender->sendMessage($this->getConfig()->get("info2"));
              break;
          }
     }
