@@ -1,9 +1,4 @@
 ---
-prefix: "[INFO]"
-info:
-  - "Website: google.com"
-  - "Vote: google.com"
-  - "Donate: google.com"
-  - "I like pie!"
-  - "You can add and remove lines!"
+info1: info1 message
+info2: info2 message
 ...
